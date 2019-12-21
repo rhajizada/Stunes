@@ -9,7 +9,8 @@ dotenv.config();
     I recommend putting all your configuration
     settings into environment variables
 */
-const ip = process.env.IP; // Enter servers ip address 
+const ip = process.env.IP; // Enter servers ip address
+const PORT = process.env.PORT;
 
 // API Stuff
 const ClientID = process.env.ClientID; // Enter Spotify App Client ID
@@ -136,6 +137,6 @@ app.post('/playlists/:token', async (req, res) => {
 
 });
 
-app.listen(4000, () => {
-    console.log('Server listening on port 4000');
+app.listen(PORT, () => {
+    console.log(`Server started on ${ip}`);
 });

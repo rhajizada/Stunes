@@ -22,10 +22,9 @@
   "scripts": {
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
-    "dev": "run-p start:dev autobuild",
-    "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev",
-    "serve": "nodemon server.js",
-    "express": "run-p  serve autobuild"
+    "dev": "run-p  serve:dev autobuild",
+    "start": "run-p  build serve",
+    "serve": "node server.js",
+    "serve:dev": "nodemon server.js"
   }
 }
